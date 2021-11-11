@@ -12,6 +12,7 @@ public class WebDriverTest {
         System.setProperty("webdriver.gecko.driver","C:/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         driver.get("https://openfx.by/#01");
+        System.out.print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+driver.manage().window().getSize()+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         WebElement searchInput = driver.findElement(By.cssSelector("#fullpage > section.section.fp-section.active.fp-table.fp-completely > div > div > div > div.header-top > div > div.header-link > a.span.enter"));
         Thread.sleep(1000);
         searchInput.click();
