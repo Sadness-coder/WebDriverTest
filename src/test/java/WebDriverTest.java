@@ -29,7 +29,7 @@ public class WebDriverTest {
         Thread.sleep(4000);
         searchInput.click();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollBy(0,0)");
+        jse.executeScript("window.scrollBy(25000,0)");
         searchInput = driver.findElement(By.cssSelector("div.row:nth-child(7) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > button:nth-child(1)"));
         Thread.sleep(4000);
         searchInput.click();
