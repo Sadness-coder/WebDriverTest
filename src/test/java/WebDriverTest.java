@@ -33,22 +33,18 @@ public class WebDriverTest {
         searchInput.click();
         Thread.sleep(4000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollBy(0,0)");
+        jse.executeScript("window.scrollBy(0,500)", "");
         Thread.sleep(2000);
         searchInput = driver.findElement(By.cssSelector("div.row:nth-child(7) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > button:nth-child(1)"));
-
         searchInput.click();
         Thread.sleep(4000);
         searchInput = driver.findElement(By.cssSelector("#table-accounts > tbody > tr > td:nth-child(8) > div > div > a:nth-child(1)"));
-
         searchInput.click();
         Thread.sleep(4000);
         searchInput = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[3]/a"));
-
         searchInput.click();
         Thread.sleep(4000);
         searchInput = driver.findElement(By.cssSelector(".fixSyle2 > span:nth-child(4) > button:nth-child(1)"));
-
         searchInput.click();
 
 
