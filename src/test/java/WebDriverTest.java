@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class WebDriverTest {
     @Test
     public void main() throws InterruptedException {
-        System.setProperty("webdriver.gecko.driver","C:/geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         Dimension d = new Dimension(1296, 975);
         driver.manage().window().setSize(d);
