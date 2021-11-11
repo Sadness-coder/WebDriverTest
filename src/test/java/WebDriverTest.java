@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
@@ -11,6 +8,8 @@ public class WebDriverTest {
     public void main() throws InterruptedException {
         System.setProperty("webdriver.gecko.driver","C:/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
+        Dimension d = new Dimension(1296, 975);
+        driver.manage().window().setSize(d);
         driver.get("https://openfx.by/#01");
         System.out.print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+driver.manage().window().getSize()+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         WebElement searchInput = driver.findElement(By.cssSelector("#fullpage > section.section.fp-section.active.fp-table.fp-completely > div > div > div > div.header-top > div > div.header-link > a.span.enter"));
