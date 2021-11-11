@@ -40,7 +40,6 @@ public class WebDriverTest {
         Thread.sleep(4000);
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector("table.table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(3) > a:nth-child(1)"));
-        Thread.sleep(400000000);
         Thread.sleep(4000);
         searchInput.click();
         Thread.sleep(4000);
