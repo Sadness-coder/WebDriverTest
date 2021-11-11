@@ -21,7 +21,6 @@ public class WebDriverTest {
         searchInput = driver.findElement(By.cssSelector("#login > form > div:nth-child(2) > div:nth-child(1) > div > input:nth-child(1)"));
         searchInput.sendKeys("Aezakmi123");
         searchInput = driver.findElement(By.cssSelector("#login > form > div:nth-child(3) > div.col-12.text-center > button"));
-        Thread.sleep(8000);
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector("#sidebar > div > ul > li:nth-child(1) > div > div.d-flex.align-items-center.multiple-menu-item.py-2.px-3 > i.fa.fa-caret-down.fa-lg.mr-2.ml-auto"));
         Thread.sleep(8000);
