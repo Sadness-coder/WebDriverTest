@@ -36,7 +36,7 @@ public class WebDriverTest {
         searchInput = driver.findElement(By.cssSelector("#table-accounts > tbody > tr > td:nth-child(8) > div > div > a:nth-child(1)"));
         Thread.sleep(4000);
         searchInput.click();
-        searchInput = driver.findElement(By.cssSelector("#main-content > div > div.opasity-block > div.card-body > div.row.align-items-stretch.ml-2.mr-2 > div:nth-child(1) > div > div.col-md-8.p-3.align-content-stretch > table.table.borderless.d-sm-table.d-table > tbody > tr:nth-child(4) > td.d-none.d-sm-none.d-md-block.d-lg-block.d-xl-block.text-right > a"));
+        searchInput = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[3]/a"));
         Thread.sleep(4000);
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector(".fixSyle2 > span:nth-child(4) > button:nth-child(1)"));
