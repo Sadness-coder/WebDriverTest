@@ -2,7 +2,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
-
 public class WebDriverTest {
     @Test
     public void main() throws InterruptedException {
@@ -47,8 +46,6 @@ public class WebDriverTest {
         searchInput = driver.findElement(By.cssSelector(".fixSyle2 > span:nth-child(4) > button:nth-child(1)"));
         searchInput.click();
         Thread.sleep(2000);
-
-
         driver.quit();
     }
 }
