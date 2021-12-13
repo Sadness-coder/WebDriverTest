@@ -2,6 +2,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -9,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverTest {
     @Test
     public void main() throws InterruptedException {
+        String prevBalance = "";
+        String currentBalance = "";
         System.setProperty("webdriver.gecko.driver","geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
@@ -32,11 +35,14 @@ public class WebDriverTest {
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector("#table-accounts > tbody > tr > td:nth-child(8) > div > div > a:nth-child(1)"));
         searchInput.click();
+        prevBalance = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[2]/span")).getText();
         searchInput = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[3]/a"));
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector(".fixSyle2 > span:nth-child(4) > button:nth-child(1)"));
         searchInput.click();
-        Thread.sleep(2000);
+        currentBalance = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[2]/span")).getText();
+        Assert.assertNotEquals(prevBalance, currentBalance);
+        Thread.sleep(5000);
         driver.quit();
     }
 }
