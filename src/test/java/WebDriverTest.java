@@ -4,7 +4,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverTest {
@@ -42,7 +41,6 @@ public class WebDriverTest {
         searchInput.click();
         currentBalance = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div/div[2]/table[2]/tbody/tr[4]/td[2]/span")).getText();
         Assert.assertNotEquals(prevBalance, currentBalance);
-        Thread.sleep(5000);
         driver.quit();
     }
 }
