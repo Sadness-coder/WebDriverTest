@@ -10,9 +10,8 @@ public class WebDriverTest {
     @Test
     public void main() throws InterruptedException {
         System.setProperty("webdriver.gecko.driver","geckodriver.exe");
-        FirefoxOptions options = new FirefoxOptions();
-        WebDriver driver = new FirefoxDriver(options);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
         driver.get("https://openfx.by/#01");
         WebDriverWait wait = new WebDriverWait(driver,10);
         WebElement searchInput = driver.findElement(By.cssSelector("#fullpage > section.section.fp-section.active.fp-table.fp-completely > div > div > div > div.header-top > div > div.header-link > a.span.enter"));
