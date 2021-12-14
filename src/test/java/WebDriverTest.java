@@ -28,8 +28,6 @@ public class WebDriverTest {
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector("#outer-element-0 > ul > li:nth-child(2) > a"));
         searchInput.click();
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollBy(0,500)", "");
         searchInput = driver.findElement(By.cssSelector("div.row:nth-child(7) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(8) > div:nth-child(1) > button:nth-child(1)"));
         searchInput.click();
         searchInput = driver.findElement(By.cssSelector("#table-accounts > tbody > tr > td:nth-child(8) > div > div > a:nth-child(1)"));
