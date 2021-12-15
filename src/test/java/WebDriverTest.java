@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverTest {
     @Test
     public void main() throws InterruptedException {
-        String prevBalance = "";
-        String currentBalance = "";
+        String prevBalance = " ";
+        String currentBalance = " ";
         System.setProperty("webdriver.gecko.driver","geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
